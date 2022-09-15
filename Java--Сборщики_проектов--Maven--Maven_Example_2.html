@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Maven Example 2</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Maven Example 2</h1><br/><br />==== pom.xml ====<br />&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br />&lt;project xmlns="<a href="http://maven.apache.org/POM/4.0.0"">http://maven.apache.org/POM/4.0.0"</a> xmlns:xsi="<a href="http://www.w3.org/2001/XMLSchema-instance"">http://www.w3.org/2001/XMLSchema-instance"</a><br />         xsi:schemaLocation="<a href="http://maven.apache.org/POM/4.0.0">http://maven.apache.org/POM/4.0.0</a> <a href="http://maven.apache.org/xsd/maven-4.0.0.xsd">">http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;</a><br />    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;<br /><br />    &lt;parent&gt;<br />        &lt;groupId&gt;hillel.course.javaee20220604&lt;/groupId&gt;<br />        &lt;artifactId&gt;for-students-2022-06-04&lt;/artifactId&gt;<br />        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;<br />    &lt;/parent&gt;<br /><br />    &lt;artifactId&gt;Lesson-12-maven&lt;/artifactId&gt;<br />    &lt;packaging&gt;war&lt;/packaging&gt;<br /><br />    &lt;dependencies&gt;<br />        &lt;dependency&gt;<br />            &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;<br />            &lt;artifactId&gt;tomcat-servlet-api&lt;/artifactId&gt;<br />            &lt;version&gt;10.0.14&lt;/version&gt;<br />            &lt;scope&gt;provided&lt;/scope&gt;<br />        &lt;/dependency&gt;<br />        &lt;dependency&gt;<br />            &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;<br />            &lt;artifactId&gt;tomcat-jsp-api&lt;/artifactId&gt;<br />            &lt;version&gt;10.0.14&lt;/version&gt;<br />            &lt;scope&gt;provided&lt;/scope&gt;<br />        &lt;/dependency&gt;<br />    &lt;/dependencies&gt;<br /><br />    &lt;build&gt;<br />        &lt;finalName&gt;${project.artifactId}&lt;/finalName&gt;<br />        &lt;plugins&gt;<br />            &lt;plugin&gt;<br />                &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;<br />                &lt;version&gt;3.3.2&lt;/version&gt;<br />            &lt;/plugin&gt;<br />        &lt;/plugins&gt;<br />    &lt;/build&gt;<br />&lt;/project&gt;<br />========================<br /><br /><br /><br /><br />   </div></body></html>

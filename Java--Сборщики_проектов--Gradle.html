@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Gradle</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Gradle</h1><br/><br />Gradle пишется на Groovy<br />Использует репозиторий Maven<br />Gradle ближе к Ant но с возможностями Maven<br />Target (у Ant), Goal (у Maven), Task (у Gradle)<br />Task у Gradle можно менять<br />Gradle часто вместе с проектом ложит в репозиторий билд-систему (gradlew - sh для Линукса и gradlew.bat файл для Windows. Но с точки зрения репозитория никаких бинарных файлов в репозитроии быть не должно<br /><br />В корне проекта два файла:<br />build.gradle - главный файл (написан на Groovy)<br />settings.gradle<br /><br />Правой кн на файле build.gradle в IDEA: Link Gradle Project - откроется окно проекта Gradle<br /><br />В командной строке:<br />gradle clean<br />gradle build<br />gradle clean build<br /><br /><br /><br /></div></body></html>
