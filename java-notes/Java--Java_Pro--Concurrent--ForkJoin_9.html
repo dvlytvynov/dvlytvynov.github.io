@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ForkJoin</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>ForkJoin</h1><br/><p><h2>ForkJoin </h2></p><p></p><p>Fork Join фреймворк для решения рекурсивных задач, работающих по алгоритмам разделяй и властвуй или Mapreduce.</p><p>Так, за счет разбиения на части, можно добиться их параллельной обработки в разных потоках. Для решения этой задачи можно использовать и обычный ThreadPoolExecutor, но за счет частого переключения контекста и отслеживания контроля исполнения все это не очень эффективно работает. Тут то нам приходит на помощь Fork Join framework в основу которого используется work-stealing алгоритм. Наиболее хорошо раскрывает себя в системах с большим количеством процессоров.</p><p></p><p><strong>ForkJoinPool</strong> - Представляет собой точку входа для запуска корневых (main) ForkJoinTask задач. Подзадачи запускаются через методы задачи, от которой нужно отстреливаться (fork). По умолчанию создается пул потоков с количеством потоков равным количеству доступных для JVM процессоров (cores).</p><p><strong>ForkJoinTask</strong> - Базовый класс для всех Fork Join задач. Из ключевых методов можно отметить: </p><p>    • <strong>fork()</strong> — добавляет задачу в очередь текущего потока ForkJoinWorkerThread для асинхронного выполнения; </p><p>    • <strong>invoke()</strong> — запускает задачу в текущем потоке; </p><p>    • <strong>join()</strong> — ожидает завершения подзадачи с возвращением результата; </p><p>    • <strong>invokeAll(...)</strong> — объединяет все три предыдущие операции, выполняя две или более задач за один заход; </p><p>    • <strong>adapt(...)</strong> — создает новую задачу ForkJoinTask из Runnable или Callable объектов.</p><p><strong>RecursiveTask</strong> - Абстрактный класс от ForkJoinTask, с объявлением метода compute, в котором должна производиться асинхронная операция в наследнике.</p><p><strong>RecursiveAction</strong> - Отличается от RecursiveTask тем, что не возвращает результат.</p><p><strong>ForkJoinWorkerThread</strong> -  Используется в качестве имплементации по умолчанию в ForkJoinPool. При желании можно отнаследоваться и перегрузить методы инициализации и завершения worker потока.<strong></strong></p><p><strong></strong></p></div>
+</body>
+</html>

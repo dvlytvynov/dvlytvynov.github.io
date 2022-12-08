@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Concurrent Collections</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Concurrent Collections</h1><br/><p><h2>Concurrent Collections</h2></p><p></p><p><strong>List&lt;String&gt; list = </strong><strong><span style="color:#cc7832;">new </span></strong><strong>ArrayList&lt;&gt;()</strong><strong><span style="color:#cc7832;">;</span></strong></p><p><strong><span style="color:#cc7832;"></span></strong><strong>List&lt;String&gt; synchronizedList = Collections.</strong><em><strong>synchronizedList</strong></em><strong>(list)</strong><strong><span style="color:#cc7832;">;</span></strong> // враппер над list, в этом враппере все методы синхронизированы</p><p></p><p>                                     // Запрос в google: “java concurrent collections”</p><p><strong>ConcurrentHashMap;</strong></p><p><strong>ConcurrentLinkedDeque;</strong></p><p><strong>ConcurrentLinkedQueue;</strong></p><p><strong>ConcurrentSkipListMap;</strong></p><p><strong>ConcurrentSkipListSet;</strong></p><p></p><p><strong>CopyOnWriteArrayList;</strong>   // коллекция, которая при изменениях будет создавать новую,</p><p>                                         // которая полностью копирует предыдущую, для того, чтобы сохранить консистентность данных</p></div>
+</body>
+</html>

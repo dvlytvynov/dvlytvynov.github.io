@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Exceptions</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Exceptions</h1><br/><p></p><p><h2>Введение в обработку исключений</h2></p><p><span style="background-color:#ffff00;">try</span>{</p><p>    int[] numbers = new int[3];</p><p>    numbers[4]=45;</p><p>    System.out.println(numbers[4]);</p><p>}</p><p><span style="background-color:#ffff00;">catch</span>(Exception ex){</p><p>     </p><p>    ex.printStackTrace();</p><p>}</p><p><span style="background-color:#ffff00;">finally</span>{</p><p>    System.out.println(&quot;Блок finally&quot;);</p><p>}</p><p>System.out.println(&quot;Программа завершена&quot;);</p><p> </p><p>Выражение <strong>catch</strong> имеет следующий синтаксис: <code>catch (тип_исключения имя_переменной)</code>. Блок <code>finally</code>  необязательный, и его можно при обработке исключений опускать. Блок <code>finally</code> выполняется в любом случае, возникло ли исключение в блоке try или нет</p><p> </p><p></p><p><h3>Оператор throw</h3></p><p>Чтобы сообщить о выполнении исключительных ситуаций в программе, можно использовать оператор <strong>throw</strong>. То есть с помощью этого оператора мы сами можем создать исключение и вызвать его в процессе выполнения. Например, в нашей программе происходит ввод числа, и мы хотим, чтобы, если число больше 30, то возникало исключение:</p><p>try{</p><p>            Scanner in = new Scanner(System.in);</p><p>            int x = in.nextInt();</p><p>            if(x&gt;=30){</p><p>               <span style="background-color:#ffff00;">throw</span> new Exception(&quot;Число х должно быть меньше 30&quot;);</p><p>           }</p><p>        }</p><p>        catch(Exception ex){</p><p>             </p><p>            System.out.println(ex.getMessage());</p><p>        }</p><p></p><p> </p></div>
+</body>
+</html>

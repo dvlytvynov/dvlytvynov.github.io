@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Типы данных</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Типы данных</h1><br/><p></p><p><h2>Типы данных</h2></p><p><table class="table"><tr><th> </th><th> </th><th> </th><th> </th></tr><tr><td>№</td><td>Тип</td><td>Размер (бит)</td><td>Диапазон</td></tr><tr><td>1</td><td>byte</td><td>8</td><td>от -128 до 127</td></tr><tr><td>2</td><td>short</td><td>16</td><td>от -32768 до 32767</td></tr><tr><td>3</td><td>char</td><td>16</td><td>беззнаковое целое число, представляющее собой символ UTF-16 (буквы и цифры)</td></tr><tr><td>4</td><td>int</td><td>32</td><td>от -2147483648 до 2147483647</td></tr><tr><td>5</td><td>long</td><td>64</td><td>от -9223372036854775808L до 9223372036854775807L</td></tr><tr><td>6</td><td>boolean</td><td>8 (в массивах), 32 (не в массивах используется int)</td><td>true (истина) или false (ложь)</td></tr><tr><td>7</td><td>float</td><td>32</td><td>от 1.4e-45f до 3.4e+38f</td></tr><tr><td>8</td><td>double</td><td>64</td><td>от 4.9e-324 до 1.7e+308</td></tr></table></p><p>long num = 2147483649; // 2147483649 типа int по умолчанию</p><p>long num = 2147483649L;</p><p>int num111 = 0x6F; // 16-тиричная система, число 111</p><p>int num8 = 010; // 8-ричная система, число 8</p><p>int num13 = 0b1101; // 2-ичная система, число 13</p><p>int x = 123_456; // разделение разрядов</p><p>int y = 234_567__789;float fl = 30.6f;</p><p>double db = 30.6; числа с плавающей точкой по умолчанию double</p><p>char ch=102; // символ &#39;f&#39;</p><p>char ch=&#39;f&#39;; // символ &#39;f&#39;</p><p>char ch=&#39;\u0066&#39; ; // символ &#39;f&#39; 16-ричная форма</p></div>
+</body>
+</html>

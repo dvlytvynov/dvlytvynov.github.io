@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>SonarQube</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>SonarQube</h1><br/><p><a href="Java_Enterprise--SonarQube_40.html">SonarQube</a> - Средство автоматизации для быстрой проверки качества кода (самый распространенный и бесплатный)</p><p></p><p>- <a href="https://www.sonarqube.org/">https://www.sonarqube.org/</a></p><p>- Download/Community edition</p><p>- Распаковать ZIP-архив</p><p>- <a href="file://C:/Users/Dmk/Downloads/sonarqube-9.5.0.56709/sonarqube-9.5.0.56709/bin/windows-x86-64">.\sonarqube-9.5.0.56709\sonarqube-9.5.0.56709\bin\windows-x86-64</a></p><p>- Открыть в этой папке командную строку (ввести cmd в строке адреса) (Если будут какая-то ошибка, то терминал не закроется, и эту ошибку можно увидеть)</p><p>   → StartSonar.bat</p><p>      ⇒ Должно вывести в конце (в папку <a href="file://C:/Users/Dmk/Downloads/sonarqube-9.5.0.56709/sonarqube-9.5.0.56709/temp">.\sonarqube-9.5.0.56709\sonarqube-9.5.0.56709\temp</a> помещаются нужные файлы)</p><p>         • jvm 1    | 2022.08.07 17:44:18 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up</p><p>         • jvm 1    | 2022.08.07 17:44:18 INFO  app[][o.s.a.SchedulerImpl] SonarQube is operational</p><p>   → В браузере: <a href="http://localhost:9000">http://localhost:9000</a> (9000 - порт по умолчанию)</p><p>   → Запустить из терминала IDEA в своем проекте: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905:sonar -D sonar.login=admin -D sonar.password=admin - сканирует проект, подключается к запущенному sonar и помещает туда отчет; нужно обновить в браузере SonarQube, зайти в проект, там можно посмотреть отчет:</p><p>      ⇒ <a href="http://localhost:9000/projects">http://localhost:9000/projects</a></p><p>   → См. логи: <a href="file://C:/Users/Dmk/Downloads/sonarqube-9.5.0.56709/sonarqube-9.5.0.56709/logs">.\sonarqube-9.5.0.56709\sonarqube-9.5.0.56709\logs</a></p><p></p><p><a href="Java_Enterprise--SonarQube_40.html">SonarQube</a> можно прописать в плагинах в pom-файле</p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Создание одного коммита из нескольких</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Создание одного коммита из нескольких</h1><br/><p></p><p>1. Находимся на старой ветке branch1 со монжеством коммитов</p><p>2. git branch &lt;name&gt; - создаем новую ветку на всякий случай, чтобы все не испортить name=temp-2022-06-10-22-00</p><p>3. перключаемся на main</p><p>4. с помощью gitk копируем хэш коммита1 с нужными файлами, сюда хотим переместить main</p><p>5. git reset --hard &lt;хэш коммита1&gt; - после этой команды текущая ветка (main) находится на коммите1, файловая система соответствует коммиту1</p><p>6. с помощью gitk копируем хэш коммита2, от этого коммита ответвится конечный нужный коммит</p><p>7. git reset --soft &lt;хэш коммита2&gt; - после этой команды текущая ветка (main) находится на коммите2, файловая система не изменяется, т.е. соответствует коммиту1</p><p>8. git commit</p><p>9. git branch &lt;имя новой ветки&gt;</p><p>10. git checkout &lt;имя новой ветки&gt;</p><p>9. git branch -d branch1</p></div>
+</body>
+</html>

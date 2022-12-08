@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Циклы</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Циклы</h1><br/><p></p><p><h2>Циклы</h2></p><p><span style="background-color:#ffff00;">for</span> ([инициализация счетчика]; [условие]; [изменение счетчика])</p><p>{</p><p>    // действия</p><p>}</p><p> </p><p><span style="background-color:#ffff00;">for</span> (int i = 1; i &lt; 9; i++){</p><p>    System.out.printf(&quot;Квадрат числа %d равен %d \n&quot;, i, i * i);</p><p>}</p><p> </p><p>int i = 1;</p><p>for (; i&lt;9;){</p><p>    System.out.printf(&quot;Квадрат числа %d равен %d \n&quot;, i, i * i);</p><p>    i++;</p><p>}</p><p> </p><p>Цикл do сначала выполняет код цикла, а потом проверяет условие в инструкции while. И пока это условие истинно, цикл повторяется</p><p>int j = 7;</p><p><span style="background-color:#ffff00;">do</span>{</p><p>    System.out.println(j);</p><p>    j--;</p><p>}</p><p><span style="background-color:#ffff00;">while</span> (j &gt; 0);</p><p> </p><p>Цикл <code>while</code> сразу проверяет истинность некоторого условия, и если условие истинно, то код цикла выполняется: </p><p> </p><p>int j = 6;</p><p><span style="background-color:#ffff00;">while</span> (j &gt; 0){</p><p> </p><p>    System.out.println(j);</p><p>    j--;</p><p>}</p><p> </p><p>Оператор <strong>break</strong> позволяет выйти из цикла в любой его момент, даже если цикл не закончил свою работу</p><p>for (int i = 0; i &lt; 10; i++){</p><p>    if (i == 5)</p><p>        <span style="background-color:#ffff00;">break</span>;</p><p>    System.out.println(i);</p><p>}</p><p>Теперь сделаем так, чтобы если число равно 5, цикл не завершался, а просто переходил к следующей итерации. Для этого используем оператор <strong>continue</strong>:</p><p> </p><p>for (int i = 0; i &lt; 10; i++){</p><p>    if (i == 5)</p><p>        <span style="background-color:#ffff00;">continue</span>;</p><p>    System.out.println(i);</p><p>}</p></div>
+</body>
+</html>

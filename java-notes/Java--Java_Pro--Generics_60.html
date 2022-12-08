@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Generics</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Generics</h1><br/><p></p><p><h3>Generics (Обобщения)</h3></p><p>Обобщения существуют до момента компиляции. Во время компиляции вместо T, V, &lt;T&gt;.... подставляются конкретные Object.</p><p>Нельзя создать объект типа T :   ob = new T();</p><p>Нельзя создать статические переменные типа T :  static T ob</p><p>В статическом методе нельзя использовать параметр типа T :  static T ob() {...}   -  так как нельзя создать экземпляр статического класса.</p><p>Нельзя создать массив типа T (т.к. нужно делать грязное преобразование   T[] arr = (T[]) new Object[10]  )</p><p>List&lt;?&gt; - параметризовано чем-угодно. Если нужно параметризовать, но заранее не знаем, чем будет параметризовано.</p><p>public class SomeClass&lt;T extends OtherClass&gt; {...}  -  (при объявлении класса) класс можно параметризовать типом OtherClass и его наследниками.</p><p>SomeClass&lt;? super OtherClass&gt; some = new SomeClass&lt;&gt;();  -  (при создании экземпляра) классSomeClass параметризуем классом  OtherClass или его наследниками.</p><p>List&lt;? extends Number&gt; - список будет хранить только числа. Список параметризован чем угодно, но это что угодно должно расширять Number.</p><p>List&lt;V extends T&gt; -   V - любой наследник от типа, которым является T.</p><p>List&lt;? super Integer&gt; - ограничение с верхней стороны, ограничение дает возможность добавлять в список только Integer.</p><p>class TestClass&lt;T extends OtherClass &amp; FirstInterface &amp; SecondInterface …&gt; { ... - ограничение включает тип класса и тип одного или более интерфейсов.</p><p>instanceof  - оператор проверки принадлежности типа</p><p>instanceof расшифровывает понятие «объект создан на основе класса»</p><p>b instanceof ClassB = true  -  если экземпляр b создан на основании класса ClassB (b - экземпляр класса ClassB).</p><p>b instanceof ClassA = true  -  если экземпляр b создан на основании класса ClassA (если ClassB - наследник ClassA).</p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Create Tables</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Create Tables</h1><br/><p></p><p><strong>Создание базы данных</strong></p><p>MySQL Workbench / SCHEMAS / Пр.кн. / Create Schema :</p><p>• Schema name - имя базы данных</p><p>• Apply</p><p>   ◇ CREATE SCHEMA `sandbox` ;</p><p>• Apply</p><p></p><p><strong>Создание таблиц</strong></p><p>SCHEMAS / sandbox / Tables / Пр.кн. / Create Table - создаем поля таблицы</p><p><img src="images/102-1.png" alt="images/102-1.png" /></p><p>Apply</p><p>Отобразится DDL-запрос:</p><p>CREATE TABLE `sandbox`.`users` (</p><p>  `id` INT UNSIGNED NOT NULL,</p><p>  `full_name` VARCHAR(255) NOT NULL,</p><p>  `birthday` DATE NOT NULL,</p><p>  `rating` FLOAT NOT NULL DEFAULT 0.00,</p><p>  `status` TINYINT(1) NOT NULL,</p><p>  `sex` ENUM(&#39;male&#39;, &#39;female&#39;, &#39;other&#39;) NOT NULL DEFAULT &#39;other&#39;,</p><p>  `language` SET(&#39;english&#39;, &#39;german&#39;, &#39;french&#39;) NOT NULL);</p><p>Apply</p><p></p><p>Посмотреть DDL-запрос для создания таблицы:</p><p>1 вариант: SCHEMAS / sandbox / Tables / users / Пр.кн. / Table Inspector / DDL</p><p>2 вариант: SCHEMAS / sandbox / Tables / users / Пр.кн. / Send to SQL Editor / Create Statement</p><p></p><p><strong>Экспорт базы данных</strong></p><p></p><p>Data Export / Выбираем базу данных и таблицы / Start Export</p><p></p><p><strong>Изменить созданные таблицы</strong></p><p></p><p>SCHEMAS / sandbox / Tables / users / Пр.кн. / Alter Table</p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
+</body>
+</html>

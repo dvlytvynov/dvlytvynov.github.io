@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Aggregate Functions</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Aggregate Functions</h1><br/><p></p><p>Агрегирующие функции</p><p></p><p><strong>SELECT COUNT(*) FROM film;</strong> // кол-во записей, которые хранятся в таблице film</p><p></p><p><strong>SELECT MIN(rental_rate) FROM film;</strong> // максимальная цена аренды фильма</p><p><strong>SELECT MAX(rental_rate) FROM film;</strong> // минимальная цена аренды фильма</p><p><strong>SELECT AVG(rental_rate) FROM film;</strong> // средняя цена аренды фильма</p><p></p><p>Совмещаем все эти функции в одном запросе:</p><p><strong>SELECT MAX(rental_rate), MIN(rental_rate), AVG(rental_rate) FROM film;</strong></p><p><strong>SELECT MAX(rental_rate) AS max, MIN(rental_rate) AS min, AVG(rental_rate) AS avg FROM film;</strong> // техника алеасов - задаем собственные имена колонкам</p><p></p><p><strong>SELECT COUNT(*) FROM film;</strong> // кол-во всех записей, которые хранятся в таблице film</p><p><strong>SELECT COUNT(original_language_id) FROM film;</strong> // считает только те строки, где в колонке original_language_id не NULL</p></div>
+</body>
+</html>

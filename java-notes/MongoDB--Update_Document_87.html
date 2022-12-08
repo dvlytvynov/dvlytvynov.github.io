@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Update Document</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Update Document</h1><br/><p></p><p>Изменение документа:</p><p></p><p>Для этих целей в MongoDB существуют методы <strong>update()</strong> и <strong>save()</strong>. Метод <strong>update()</strong> изменяет значения уже существующего документа в то время, как метод <strong>save()</strong> перезаписывает существующий документ.</p><p>Метод <strong>update()</strong> имеет следующий вид:</p><p><strong>db.ИМЯ_КОЛЛЕКЦИИ.update(КРИТЕРИЙ_ВЫБОРА, ИЗМЕНЁННЫЕ_ДАННЫЕ)</strong></p><p></p><p>Допустим, что мы хотим изменить поле salary у разработчика с именем Eugene Suleimanov. Для этого нам необходимо выполнить следующую команду:</p><p><strong>db.developers.update( {&#39;title&#39;:&#39;Eugene Suleimanov&#39;}, {$set : { &#39;salary&#39;: 2500 }} )</strong><code></code></p><p><code></code></p><p><code></code>Для того, чтобы изменить несколько записей необходимо установить параметр multi в значение true.</p><p>Изменим зарплату всем разработчикам, со специальностью Java:</p><p><strong>db.developers.update( {&#39;specialty&#39;:&#39;Java&#39;}, {$set : { &#39;salary&#39;: 3500 }}, {multi: true} )</strong><code></code></p><p><code></code></p><p>Метод <strong>save()</strong></p><p>Данный метод используется для перезаписи уже существующего документа новым.</p><p>Данный метод имеет следующий синтаксис:</p><p><strong>db.ИМЯ_КОЛЛЕКЦИИ.save( {_id:ObjectId(), НОВЫЕ_ДАННЫЕ} )</strong></p><p>Пример:</p><p><strong>db.developers.save( { &quot;_id&quot;: ObjectId(&quot;5815f4f535ee883c37ac8b4f&quot;), &quot;title&quot; : &quot;Nikolay Nikolaev&quot;, &quot;specialty&quot;: &quot;C++&quot;, &quot;skills&quot;: [&quot;C++&quot;, &quot;STL&quot;, &quot;SQL&quot;], &quot;salary&quot; : 3500  } )</strong></p></div>
+</body>
+</html>

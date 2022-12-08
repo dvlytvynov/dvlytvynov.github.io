@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Parameterized Queries</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Parameterized Queries</h1><br/><p></p><p>Параметризированные запросы:</p><p></p><p>В MongoDB используются следующие операции:</p><p><table class="table"><tr><th>Операция</th><th>Синтаксис</th><th>Пример</th><th>Эквивалент в реляционной БД</th></tr><tr><td>Равенство</td><td>{&lt;key&gt;:&lt;value&gt;}</td><td>db.developers.find({“specialty”:”Java”}).pretty()</td><td>where specialty = ‘Java’</td></tr><tr><td>Меньше, чем</td><td>{&lt;key&gt;:{$lt:&lt;value&gt;}}</td><td>db.developers.find({“salary”:{$lt:1000}}).pretty()</td><td>where salary &lt; 1000</td></tr><tr><td>Меньше, либо равно</td><td>{&lt;key&gt;:{$lte:&lt;value&gt;}}</td><td>db.developers.find({“salary”:{$lte:1000}}).pretty()</td><td>where salary &lt;= 1000</td></tr><tr><td>Больше, чем</td><td>{&lt;key&gt;:{$gt:&lt;value&gt;}}</td><td>db.developers.find({“salary”:{$gt:1000}}).pretty()</td><td>where salary &gt; 1000</td></tr><tr><td>Больше, либо равно</td><td>{&lt;key&gt;:{$gte:&lt;value&gt;}}</td><td>db.developers.find({“salary”:{$gte:1000}}).pretty()</td><td>where salary &gt;= 1000</td></tr><tr><td>Не равно</td><td>{&lt;key&gt;:{$ne:&lt;value&gt;}}</td><td>db.developers.find({“salary”:{$ne:1000}}).pretty()</td><td>where salary != 1000</td></tr></table></p><p> </p><p>Операция AND</p><p>Для комбинирования нескольких условий в запросе используется оператор AND.</p><p>Данный запрос имеет следующий общий вид:</p><p><code></code></p><p><code></code><strong>db.ИМЯ_КОЛЛЕКЦИИ.find(</strong></p><p><strong>   {</strong></p><p><strong>      $and: [</strong></p><p><strong>         {ключ1: значение1}, {ключ2:значение2}</strong></p><p><strong>      ]</strong></p><p><strong>   }</strong></p><p><strong>).pretty()</strong><code></code></p><p><code></code></p><p>Операция OR</p><p>Для выбора документа, который соответствует одному из условий, в MongoDB используется команда $or.</p><p>Общий вид данной команда следующий:</p><p><code></code></p><p><code></code><strong>db.ИМЯ_КОЛЛЕКЦИИ.find(</strong></p><p><strong>   {</strong></p><p><strong>      $or: [</strong></p><p><strong>         {ключ1: значение1}, {ключ2:значение2}</strong></p><p><strong>      ]</strong></p><p><strong>   }</strong></p><p><strong>).pretty()</strong><code></code></p><p><code></code></p></div>
+</body>
+</html>

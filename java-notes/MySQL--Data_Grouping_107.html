@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Data Grouping</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Data Grouping</h1><br/><p></p><p>Группировка данных</p><p></p><p><strong>SELECT SUM(length) FROM film;</strong> // суммирует все значения по колонке length</p><p><strong>SELECT SUM(length) FROM film GROUP BY rating;</strong> // суммирует все значения в колонке length группируя по рейтингам rating</p><p>При группировке данных можем выводить в блоке <strong>SELECT</strong> поля, по которым агрегируем плюс сами агрегации:</p><p><strong>SELECT rating, SUM(length) FROM film GROUP BY rating;</strong> // то же, с отображением рейтинга rating</p><p></p><p>Применим условие выборки:</p><p><strong>SELECT rating, SUM(length) FROM film WHERE rental_rate = 4.99 GROUP BY rating;</strong> // сначала фильтруем данные (WHERE rental_rate = 4.99), а потом группируем (GROUP BY rating)</p><p><strong>SELECT rating, SUM(length), COUNT(*) FROM film WHERE rental_rate = 4.99 GROUP BY rating;</strong> // добавим конлонку - кол-во фильмов в том или ином рейтинге</p><p></p><p>Группировать можно не толко по текстовым полям, но и по числам:</p><p><strong>SELECT rental_rate FROM film GROUP BY rental_rate;</strong></p><p><strong>SELECT rental_rate, COUNT(*) FROM film GROUP BY rental_rate;</strong> // то же, с колонкой кол-ва фильмов в той или иной ценовой категории</p><p></p><p>Группируем по нескольким полям:</p><p><strong>SELECT rating, rental_rate, COUNT(*) FROM film GROUP BY rental_rate, rating;</strong></p><p><strong>SELECT rating, rental_rate, COUNT(*) FROM film GROUP BY rental_rate, rating ORDER BY rating, rental_rate;</strong> // то же, плюс сортировка сначала по рейтингу, потом по цене по возрастанию</p><p></p><p>Если в результате запроса нужно выполнить какое-то условие:</p><p></p><p>В блоке WHERE можно использовать только те поля, которые действительно существуют в таблице.</p><p>Если в результате выполнения запроса создали какое-то вируальное поле, и нужно выполнить условие, то виртуальное поле нужно поместить в блок HAVING и указать после GROUP BY:</p><p><strong>SELECT rating, rental_rate, COUNT(*) AS counter FROM film GROUP BY rental_rate, rating HAVING counter &gt; 50 ORDER BY rating, rental_rate;</strong></p><p>Блок HAVING работает так же, как и блок WHERE, но только для виртуальных полей.</p><p></p></div>
+</body>
+</html>

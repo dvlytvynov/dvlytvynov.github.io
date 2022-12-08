@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Remove Document</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Remove Document</h1><br/><p></p><p>Удаление документа:</p><p></p><p>Метод remove() принимает два параметра:</p><p>• критерий удаления - Критерий, по которому документ будет удалён</p><p>• justOne - Если значение параметра ‘true’ – удаляет только один документ</p><p></p><p><strong>db.ИМЯ_КОЛЛЕКЦИИ.remove(КРИТЕРИЙ_УДАЛЕНИЯ)</strong></p><p></p><p>Пример:</p><p><strong>db.test_collection.remove( {&quot;title&quot;: &quot;Document3&quot;} )</strong></p><p></p><p>Если у нас есть несколько записей, но мы хотим удалить только первую из них, тогда нам необходимо установить параметр justOne в методе <strong>remove()</strong>.</p><p>Данный метод имеет следующий синтаксис:</p><p><code></code></p><p><code></code><strong>db.ИМЯ_КОЛЛЕКЦИИ.remove(КРИТЕРИЙ_УДАЛЕНИЯ, 1)</strong></p><p></p><p>Удаление всех документов</p><p>Для удаления всех документов из коллекции (аналог команды truncate в SQL) нам необходимо выполнить метод <strong>remove()</strong> без указания критерия удаления.</p><p>Пример:</p><p><code></code></p><p><code></code><strong>db.test_collection.remove({})</strong></p><p></p></div>
+</body>
+</html>

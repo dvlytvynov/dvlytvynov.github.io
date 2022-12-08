@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Условные конструкции</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Условные конструкции</h1><br/><p></p><p><h2>Условные конструкции</h2></p><p>int num1 = 6;</p><p>int num2 = 8;</p><p><span style="background-color:#ffff00;">if</span>(num1 &gt; num2 &amp;&amp; num1&gt;7){</p><p>    System.out.println(&quot;Первое число больше второго&quot;);</p><p>}</p><p><span style="background-color:#ffff00;">else if</span>(num1&lt;num2){</p><p>    System.out.println(&quot;Первое число меньше второго&quot;);</p><p>}</p><p><span style="background-color:#ffff00;">else</span>{</p><p>    System.out.println(&quot;Числа равны&quot;);</p><p>}</p><p> </p><p>int num = 3;</p><p>int output = 0;</p><p><span style="background-color:#ffff00;">switch</span>(num){</p><p>     </p><p>    <span style="background-color:#ffff00;">case</span> 1: </p><p>        output = 3;</p><p>        <span style="background-color:#ffff00;">break</span>;</p><p>    <span style="background-color:#ffff00;">case</span> 2: </p><p>    <span style="background-color:#ffff00;">case</span> 3: </p><p>    <span style="background-color:#ffff00;">case </span>4: </p><p>        output = 6;</p><p>        <span style="background-color:#ffff00;">break</span>;</p><p>    <span style="background-color:#ffff00;">case </span>5: </p><p>        output = 12;</p><p>        <span style="background-color:#ffff00;">break</span>;</p><p>    <span style="background-color:#ffff00;">default</span>:</p><p>        output = 24;</p><p>}</p><p>System.out.println(output);</p><p></p><p><h3>Тернарная операция</h3></p><p>Тернарную операция имеет следующий синтаксис: <code>[первый операнд - условие] ? [второй операнд] : [третий операнд]</code>. Таким образом, в этой операции участвуют сразу три операнда. В зависимости от условия тернарная операция возвращает второй или третий операнд: если условие равно <code>true</code>, то возвращается второй операнд; если условие равно <code>false</code>, то третий. Например:</p><p>int x=3;</p><p>int y=2;</p><p>int z = x&lt;y? (x+y) : (x-y);</p><p>System.out.println(z);</p></div>
+</body>
+</html>

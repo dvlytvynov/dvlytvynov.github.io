@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Maven Example 2</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Maven Example 2</h1><br/><p></p><p>==== pom.xml ====</p><p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</p><p>&lt;project xmlns=&quot;<a href="http://maven.apache.org/POM/4.0.0"">http://maven.apache.org/POM/4.0.0&quot;</a> xmlns:xsi=&quot;<a href="http://www.w3.org/2001/XMLSchema-instance"">http://www.w3.org/2001/XMLSchema-instance&quot;</a></p><p>         xsi:schemaLocation=&quot;<a href="http://maven.apache.org/POM/4.0.0">http://maven.apache.org/POM/4.0.0</a> <a href="http://maven.apache.org/xsd/maven-4.0.0.xsd">">http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</a></p><p>    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</p><p></p><p>    &lt;parent&gt;</p><p>        &lt;groupId&gt;hillel.course.javaee20220604&lt;/groupId&gt;</p><p>        &lt;artifactId&gt;for-students-2022-06-04&lt;/artifactId&gt;</p><p>        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</p><p>    &lt;/parent&gt;</p><p></p><p>    &lt;artifactId&gt;Lesson-12-maven&lt;/artifactId&gt;</p><p>    &lt;packaging&gt;war&lt;/packaging&gt;</p><p></p><p>    &lt;dependencies&gt;</p><p>        &lt;dependency&gt;</p><p>            &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;</p><p>            &lt;artifactId&gt;tomcat-servlet-api&lt;/artifactId&gt;</p><p>            &lt;version&gt;10.0.14&lt;/version&gt;</p><p>            &lt;scope&gt;provided&lt;/scope&gt;</p><p>        &lt;/dependency&gt;</p><p>        &lt;dependency&gt;</p><p>            &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;</p><p>            &lt;artifactId&gt;tomcat-jsp-api&lt;/artifactId&gt;</p><p>            &lt;version&gt;10.0.14&lt;/version&gt;</p><p>            &lt;scope&gt;provided&lt;/scope&gt;</p><p>        &lt;/dependency&gt;</p><p>    &lt;/dependencies&gt;</p><p></p><p>    &lt;build&gt;</p><p>        &lt;finalName&gt;${project.artifactId}&lt;/finalName&gt;</p><p>        &lt;plugins&gt;</p><p>            &lt;plugin&gt;</p><p>                &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;</p><p>                &lt;version&gt;3.3.2&lt;/version&gt;</p><p>            &lt;/plugin&gt;</p><p>        &lt;/plugins&gt;</p><p>    &lt;/build&gt;</p><p>&lt;/project&gt;</p><p>========================</p><p></p><p></p><p></p><p></p><p>   </p></div>
+</body>
+</html>

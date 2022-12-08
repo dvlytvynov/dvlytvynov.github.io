@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Create Collection</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Create Collection</h1><br/><p></p><p>Создание коллекции:</p><p></p><p><strong>db.createCollection(имя_коллекции, свойства_коллекции)</strong></p><p></p><p>            Требования к имени и свойствам следующие:</p><p>            <table class="table"><tr><th>Параметр</th><th>Тип</th><th>Описание</th></tr><tr><td>Имя коллекции</td><td>String</td><td>Имя создаваемой коллекции</td></tr><tr><td>Свойства коллекции</td><td>Document</td><td>Определяет такие свойства, как индексация и память.</td></tr></table></p><p>            Имя коллекции является обязательным, а свойства – нет. </p><p>            </p><p>            В свойствах мы можем использовать настраивать параметры:</p><p>            <table class="table"><tr><th>Поле</th><th>Тип</th><th>Описание</th></tr><tr><td>capped</td><td>Boolean</td><td>Создаёт ограниченную по размеру коллекцию. Если количество элементов в коллекции достигло максимума, то каждая следующая запись будет перезаписывать более старые данные.</td></tr><tr><td>autoIndexID</td><td>Boolean</td><td>Автоматически создаёт индекс для поля _id field.s</td></tr><tr><td>size</td><td>number</td><td>Определяет максимальный размер (в байтах) ограниченной (capped) коллекции. Если коллекция ограничена, то необходимо обязательно указать максимальный размер.</td></tr><tr><td>max</td><td>number</td><td>Определяет максимальное количество документов в ограниченной коллекции.</td></tr></table></p><p>            При вставке нового документа, MongoDB, в первую очередь, проверяет параметр size, а затем – параметр max в ограниченной (capped) коллекции.</p><p>            </p><p>            Пример: </p><p><strong>db.createCollection(&quot;developers&quot;, {capped: true, autoIndexID: true, size: 371400, max: 10})</strong></p></div>
+</body>
+</html>

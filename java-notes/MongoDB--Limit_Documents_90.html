@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Limit Documents</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Limit Documents</h1><br/><p></p><p>Ограничение количества документов, получаемых из коллекции.</p><p></p><p>Метод <strong>limit()</strong></p><p></p><p><strong>db.ИМЯ_КОЛЛЕКЦИИ.find().limit(КОЛИЧЕСТВО_ДОКУМЕНТОВ)</strong></p><p></p><p>Ограничить список выводимых документов первыми 2-мя:</p><p><code></code></p><p><code></code><strong>db.developers.find().pretty().limit(2)</strong></p><p></p><p>Метод <strong>skip()</strong> пропускает (игнорирует) указанное количество документов коллекции:</p><p><code></code></p><p><code></code><strong>db.ИМЯ_КОЛЛЕКЦИИ.find().limit(КОЛИЧЕСТВО_ДОУМЕНТОВ).skip(КОЛИЧЕСТВО_ДОКУМЕНТОВ)</strong></p><p></p><p>Следующая команда ограничит количество получаемых документов первыми 2-мя и проигнорирует первый документ коллекции:</p><p><code></code></p><p><code></code><strong>db.developers.find().pretty().limit(2).skip(1)</strong><code></code></p><p><code></code></p><p></p></div>
+</body>
+</html>

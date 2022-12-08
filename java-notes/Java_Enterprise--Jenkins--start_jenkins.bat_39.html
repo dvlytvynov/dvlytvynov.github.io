@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>start_jenkins.bat</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>start_jenkins.bat</h1><br/><p>start_jenkins.bat - для запуска Jenkins, параметры JAVA_HOME и PATH подставит только на время запуска</p><p></p><p>set JAVA_HOME=<a href="file://C:/Java/openjdk-17.0.2/bin">C:\Java\openjdk-17.0.2\bin</a></p><p>set PATH=<a href="file://C:/Java/openjdk-17.0.2/bin">C:\Java\openjdk-17.0.2\bin</a></p><p>java -jar jenkins.war --httpPort=1222</p><p></p><p>или</p><p></p><p>set JAVA_HOME=<a href="file://C:/Java/openjdk-17.0.2/bin">C:\Java\openjdk-17.0.2</a></p><p>set PATH=%JAVA_HOME%\bin;%PATH%</p><p>echo JAVA_HOME=%JAVA_HOME%</p><p>echo PATH=%PATH%</p><p>java -version</p><p>###echo PATH=%PATH%</p><p>java -jar jenkins.war --httpPort=1222</p></div>
+</body>
+</html>

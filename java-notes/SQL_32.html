@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>SQL</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>SQL</h1><br/><p></p><p>• SQL (Structured Query Language)</p><p><code>    Операторы определения данных (Data Definition Language, DDL)</code></p><p><code>     CREATE ALTER DROP</code></p><p><code>    Операторы манипуляции данными (Data Manipulation Language, DML)</code></p><p><code>     SELECT INSERT UPDATE DELETE </code></p><p><code>    Операторы определения доступа к данным (Data Control Language, DCL)</code></p><p><code>     GRANT REVOKE DENY</code></p><p><code>    Операторы управления транзакциями (Transaction Control Language, TCL) ACID </code></p><p><code>     BEGIN TRANSACTION COMMIT TRANSACTION ROLLBACK TRANSACTION SAVE TRANSACTION</code></p><p><code></code></p><p>-- DDL</p><p>CREATE DATABASE Student_data;</p><p>CREATE TABLE Student (</p><p>                         StudendId int,</p><p>                         LastName varchar(255),</p><p>                         FirstName varchar(255),</p><p>                         Address varchar(255),</p><p>                         Mark int</p><p>);</p><p>ALTER TABLE Student</p><p>    ADD Total int;</p><p>ALTER TABLE Student</p><p>     DROP COLUMN Mark;</p><p>DROP TABLE Student;</p><p>DROP DATABASE Student_data;</p><p></p><p>-- DML</p><p>TRUNCATE TABLE  Student;</p><p>INSERT INTO students (ID, NAME, SURNAME) &quot; +</p><p>            &quot;VALUES (?,?,?)</p><p>SELECT * FROM Student;</p><p></p><p>• JDBC - Java Database Connectivity - is an API for connecting and executing queries on a database.</p><p>• JTA</p><p>• Server (Oracle, MS SQL, PostrgeSQL, MySQL) and Embedded (H2, sqlite)</p><p>• ACID (transaction properties) interview <a href="https://en.wikipedia.org/wiki/ACID">https://en.wikipedia.org/wiki/ACID</a></p><p>• Transaction isolation levels ( Serializable, Repeatable reads, Read committed, Read uncommitted ) interview <a href="https://en.wikipedia.org/wiki/Isolation_(database_systems)">https://en.wikipedia.org/wiki/Isolation_(database_systems)</a></p></div>
+</body>
+</html>

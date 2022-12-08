@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Копирование файлов (пример)</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Копирование файлов (пример)</h1><br/><p></p><p>==== build.xml ====</p><p>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</p><p>&lt;project name=&quot;PictureCopier&quot; default=&quot;all&quot;&gt;</p><p>    &lt;target name=&quot;all&quot; description=&quot;Execute all targets&quot;&gt;</p><p>        &lt;antcall target=&quot;clean&quot;/&gt;</p><p>        &lt;antcall target=&quot;make.dir&quot;/&gt;</p><p>        &lt;antcall target=&quot;copy.pictures&quot;/&gt;</p><p>    &lt;/target&gt;</p><p>    &lt;target name=&quot;clean&quot; description=&quot;Clean directory&quot;&gt;</p><p>        &lt;echo&gt;Cleaning directory&lt;/echo&gt;</p><p>        &lt;delete dir=&quot;../build&quot;/&gt;</p><p>    &lt;/target&gt;</p><p>    &lt;target name=&quot;make.dir&quot; description=&quot;Make a dir&quot;&gt;</p><p>        &lt;echo&gt;Creating directory&lt;/echo&gt;</p><p>        &lt;mkdir dir=&quot;../build&quot;/&gt;</p><p>        &lt;mkdir dir=&quot;../build/pictures&quot;/&gt;</p><p>    &lt;/target&gt;</p><p>    &lt;target name=&quot;copy.pictures&quot; description=&quot;Copy pictures&quot;&gt;</p><p>        &lt;echo&gt;Copying pictures&lt;/echo&gt;</p><p>        &lt;copy todir=&quot;../build/pictures&quot;&gt;</p><p>            &lt;fileset dir=&quot;../../resources&quot; includes=&quot;**/*.jpg, **/*.bmp, **/*.png, **/*.tif, **/*.gif&quot;/&gt;</p><p>        &lt;/copy&gt;</p><p>    &lt;/target&gt;</p><p>&lt;/project&gt;</p><p>========================</p></div>
+</body>
+</html>

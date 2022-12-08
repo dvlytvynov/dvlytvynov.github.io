@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Sort Documents</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Sort Documents</h1><br/><p></p><p>Сортировка документов</p><p></p><p>Метод sort()</p><p><code></code></p><p><code></code><strong>db.ИМЯ_КОЛЛЕКЦИИ.find().sort( {АТРИБУТ: 1} )</strong><code></code></p><p><code></code></p><p>Значение возле атрибута, указывает порядок сортировки:</p><p>- для сортировки по возрастанию используется число ‘1’ (по умолчанию документы сортируются по возрастанию)</p><p>- для сортировки по убыванию – ‘-1’</p><p></p><p>Пример - отсортировать документы данной коллекции по имени (по возрастанию):</p><p><code></code></p><p><code></code><strong>db.developers.find().pretty().sort( {&quot;title&quot;: 1} )</strong></p></div>
+</body>
+</html>
